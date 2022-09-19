@@ -1,0 +1,128 @@
+$gray: #dadada;
+$blue-dark: #4077D6;
+
+.control--select {
+    display: flex;
+    flex-grow: 1;
+}
+
+.text-input{
+    display: flex;
+    max-width: 120px;
+    
+    &-wrapper {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        gap: 5px;
+    }
+}
+#text-input-usl {
+    max-width: none;
+    flex-grow: 1;
+}
+
+.filecl {
+    &-wrapper {
+        padding-top: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &-scale {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        border-radius: 3px;
+        width: 100%;
+        overflow: hidden;
+
+        height: 2em;
+        outline: 1px solid rgba($blue-dark, .4);
+
+        &::before {
+            background: rgba(76, 139, 247, .35);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 90%;
+            z-index: 1;
+        }
+
+        &-text{
+            color: #4077D6;
+            position: absolute;
+            z-index: 2;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        
+    }
+
+    &-settings {
+        
+        &-row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        &-title {
+            display: inline-flex;
+            align-items: center;
+            height: 36px;
+            font-size: 15px;
+            width: 240px;
+
+        }
+    }
+
+    &-block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        border: 1px solid $gray;
+        border-radius: 5px;
+        padding: 11px 20px 5px 20px;
+
+        &-title {
+            display: inline;
+            position: absolute;
+            top: -11px;
+            left: 20px;
+            padding: 0 5px;
+            font-size: 14px;
+            background: #fff;
+            font-weight: 700;
+            color: #555;
+
+        }
+
+        &-add {
+            display: inline-flex;
+            justify-content: end;
+
+            &-button {
+                cursor: pointer;
+                margin-top: 5px;
+                padding: 5px 10px;
+                background: none;
+                opacity: .5;  
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
